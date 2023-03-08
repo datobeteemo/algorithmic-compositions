@@ -1,0 +1,26 @@
+<script>
+  const gifURL = 'https://netart.rocks/images/butterfly.gif'
+  const gifwidth = 100
+  const gifheight = 100
+  
+  function createGif (x,y) {
+    const gif = document.createElement('img')
+  	gif.src = gifURL
+  	document.body.appendChild(gif)
+    gif.style.width = gifwidth + 'px'
+    gif.style.height = gifheight + 'px'
+    gif.style.position = 'absolute'
+    gif.style.left = x + 'px'
+    gif.style.top = y + 'px'
+  }
+  function setup() {
+    for (let c = 0; c < 10; c++) {
+      const x = c + gifwidth
+      const y = 0
+    	createGif(x,y)
+    }
+  }
+  
+  window.addEventListener('load', setup)
+  
+</script>
